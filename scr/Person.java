@@ -1,24 +1,18 @@
+import java.util.Scanner;
+
 public class Person {
     private String firstName;
     private String lastName;
     private int age;
     private int pesel;
 
-    public Person(String firstName, String lastName, int age, int pesel) throws NameUndefinedException, IncorrectAgeException {
-        if (firstName.length() < 2 || lastName.length() < 2) {
-            throw new NameUndefinedException("Zbyt mało znaków, minimum 3");
-        } else {
-            this.firstName = firstName;
-            this.lastName = lastName;
-        }
-
-        if (age < 1) {
-            throw new IncorrectAgeException("Zbyt mały wiek, minimum 1");
-        } else {
-            this.age = age;
-            this.pesel = pesel;
-        }
+    public Person(String firstName, String lastName, int age, int pesel) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.pesel = pesel;
     }
+
     public String getFirstName() {
         return firstName;
     }
