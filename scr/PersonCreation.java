@@ -7,24 +7,18 @@ public class PersonCreation {
         Scanner scan = new Scanner(System.in);
         System.out.println("Podaj dane osobowe");
 
-        String firstName;
-        String lastName;
-
         System.out.print("Imię: ");
-        firstName = scan.nextLine();
+        String firstName = scan.nextLine();
         System.out.print("Nazwisko: ");
-        lastName = scan.nextLine();
+        String lastName = scan.nextLine();
         if (firstName.length() <= 2 || lastName.length() <= 2) {
             throw new NameUndefinedException("Zbyt mało znaków dla imienia/nazwiska, minimum 3");
         }
 
-        int age;
-        int pesel;
-
         System.out.print("Wiek: ");
-        age = scan.nextInt();
+        int age = scan.nextInt();
         System.out.print("Pesel: ");
-        pesel = scan.nextInt();
+        int pesel = scan.nextInt();
         if (age < 1) {
             throw new IncorrectAgeException("Zbyt mały wiek, minimum 1");
         }
